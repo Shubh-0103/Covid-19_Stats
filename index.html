@@ -1,0 +1,106 @@
+<!--dashboard to display covid 19 status-->
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>COVID-19 VISUALISED</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="chartPie.js"></script>
+
+</head>
+<body>
+
+<div id="parent">
+	<div id="child">
+	Wait before you move on! Consider visiting <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" id="link" target="_blank">WHO's website</a> to get some precautions on COVID-19.
+
+	<div id="masterDiv">
+	<input type="button" id="master" value="Yes, I've understood. Pull me in!" onclick="collapse(); global_data1(); global_data2()">
+	</div>
+	</div>
+</div>
+
+<div class="mains header">
+	<div>
+	   <h1> <span>COVID-19 CRISIS: A GLIMPSE</span> <div class="small-block"></div></h1>
+	   <h4 id="header2"></h4>
+	</div>
+</div>
+
+<div class="nav-buttons">
+    <input type="button" value="Global" class="nav" onclick="global_data1(); global_data2()">
+    <input type="button" value="India" class="nav" onclick="indian_data(0)">
+</div>
+
+<div id="statelist" style="display: none;">
+	<select id="states" style="max-width: 90%;" onchange="indian_data(document.getElementById('states').selectedIndex)">
+	<option selected>Select your state/UT</option>
+	<option>Andaman and Nicobar Islands</option>
+	<option>Andhra Pradesh</option>
+	<option>Arunachal Pradesh</option>
+	<option>Assam</option>
+	<option>Bihar</option>
+	<option>Chandigarh</option>
+	<option>Chhattisgarh</option>
+	<option>Dadra and Nagar Haveli and Daman and Diu</option>
+	<option>Delhi</option>
+	<option>Goa</option>
+	<option>Gujarat</option>
+	<option>Haryana</option>
+	<option>Himachal Pradesh</option>
+	<option>Jammu and Kashmir</option>
+	<option>Jharkhand</option>
+	<option>Karnataka</option>
+	<option>Kerala</option>
+	<option>Ladakh</option>
+	<option>Madhya Pradesh</option>
+	<option>Maharashtra</option>
+	<option>Manipur</option>
+	<option>Meghalaya</option>
+	<option>Mizoram</option>
+	<option>Odisha</option>
+	<option>Puducherry</option>
+	<option>Punjab</option>
+	<option>Rajasthan</option>
+	<option>Tamil Nadu</option>
+	<option>Telengana</option>
+	<option>Uttarakhand</option>
+	<option>Uttar Pradesh</option>
+	<option>West Bengal</option>
+	</select>
+</div>
+
+<h3 id="header3" class="mains"></h3>
+
+<div class="row">
+	<div class="col">
+		<canvas id="c1"></canvas>
+	</div>
+	<div class="col">
+		<canvas id="c2"></canvas>
+	</div>
+	<div id="extra" class="col" style="display:none;">
+		<canvas id="c3"></canvas>
+	</div>	
+</div>
+
+<footer id="lowest">
+	<div>
+		<span>Made with ♥ by <a href="https://github.com/Shubh-0103">Shubh</a></span>
+		<p><b>DISCLAIMER:</b> This dashboard does not guarantee the credibility and authenticity of the data. The information displayed is from the apis <a href="https://coronavirus-19-api.herokuapp.com/all" target="_blank">1</a>, <a href="https://api.rootnet.in/covid19-in/stats/latest" target="_blank">2</a>, <a href="https://api.covid19india.org/data.json" target="_blank">3</a>, and <a href="https://coronavirus-tracker-api.herokuapp.com/v2/locations" target="_blank">4</a>.</p>
+	</div>
+</footer>
+
+<script src="global.js"></script>
+<script src="global_pie.js"></script> 
+<script src="india.js"></script>
+<script src="line.js"></script>
+
+</div>
+</body>
+</html>
