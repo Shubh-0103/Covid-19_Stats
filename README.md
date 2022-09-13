@@ -19,5 +19,5 @@ Features:
  
  </p>
 
-| ![Alt Text](https://github.com/Hardik-hi/covid-19/blob/master/covid19stats.gif) |
+| ![Alt Text](https://github.com/Shubh-0103/Covid-19_Stats/blob/master/covid19stats.gif) |
 | ------ |
